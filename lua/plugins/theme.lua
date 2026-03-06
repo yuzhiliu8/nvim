@@ -34,6 +34,13 @@ return {
 				groups = {
 					duskfox = {
 						Visual = { bg = palette.bg1 },
+						-- @variable is same color as default text in nightfox, give it a distinct color
+						["@variable"] = { fg = palette.cyan.base },
+						-- @function.method and .call are commented out in nightfox's treesitter module
+						["@function.method"] = { fg = palette.blue.bright },
+						["@function.method.call"] = { fg = palette.blue.bright },
+						-- @type.definition (class/struct names in declarations) not defined in nightfox
+						["@type.definition"] = { fg = palette.yellow.base },
 					},
 				},
 			})
